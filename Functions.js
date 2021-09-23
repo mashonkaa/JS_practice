@@ -112,17 +112,22 @@ point(1, -1)
 
 // 10.
 
-function circle(centerX, centerY, radius,){
-    let maxDistanceX = 0;
-    let maxDistanceY = 0;
+function circle(centerX, centerY, radius, pointX, pointY) {
+    let rightMaxDistanceX, leftMaxDistanceX = 0;
+    let upMaxDistanceY, downMaxDistanceY = 0;
 
-    if(centerX >= 0){
-        maxDistanceX = centerX+radius;
-    } else if(centerX < 0){
-        maxDistanceX = -radius+centerX;
-    }
-    console.log(maxDistanceX);
+
+    rightMaxDistanceX = centerX + radius;
+    leftMaxDistanceX = centerX - radius;
+
+    upMaxDistanceY = centerY + radius;
+    downMaxDistanceY = centerY - radius;
+    
+        pointX < leftMaxDistanceX || pointX > rightMaxDistanceX || pointY > upMaxDistanceY || pointY < downMaxDistanceY
+            ? console.log("Point is out of the circle")
+            : console.log("Point is in the circle");
+
 }
 
 console.log("#10")
-circle(1,1,2)
+circle(3,1,2,1 , -2)
