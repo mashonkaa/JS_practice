@@ -19,7 +19,6 @@ rgb(7,undefined,null);
 // Создайте функцию имя_функции(число){}, которой на вход передается один параметр - целое число.
 function divide(a){
     if(checkInt(a) === true) {
-        console.log("Enter only integers");
         if (a % 3 === 0 && a % 5 === 0) {
             console.log("Number can be divided by 3 and 5");
         } else if (a % 3 === 0) {
