@@ -58,9 +58,8 @@ taskInterfer(1,0,1)
 // Создайте функцию, которая принимает в качестве параметров два целых числа (a и b) и выводит на экран все чётные числа из диапазона a...b.
 function evenRange(a,b){
     let arr = [];
-    if(!(a % 1 === 0)){
-        console.log("Enter only integers");
-    }
+    
+    checkInt(a) === true{
     for(let i = a; i < b; i++){
         if(i%2 === 0){
             arr.push(i)
